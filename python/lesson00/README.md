@@ -2,12 +2,13 @@
 # Lesson 00
 
 ## Contents
-- [Brief history of computing](#Short-History-of-Coding)
-- [Basic coding logic example](#Basic-Coding-Logic-Example)
-- [Programs to install/be aware of](#Things-to-Install-or-Be-Aware-of)
-- [Basic python functions and features](#Basic-Functions-&-Features)
-- [Python file example](#.py-File-Example)
-- [Data types](#Data-Types)
+- [Brief history of computing](#short-history-of-coding)
+- [Basic coding logic example](#basic-coding-logic-example)
+- [Programs to install/be aware of](#things-to-install-or-be-aware-of)
+- [Basic python functions and features](#basic-functions-and-features)
+- [Python file example](#py-file-example)
+- [Data types & basic ideas](#data-types-and-basic-ideas)
+- [To do before next time](#to-do-before-next-time)
 
 ---
 
@@ -260,7 +261,7 @@ There are many IDE's, none of which are necessary but all of which are helpful. 
 
 ---
 
-## Basic Functions & Features
+## Basic Functions and Features
 
 <img src="imgs/python.png" alt="python logo" width="200"/>
 
@@ -296,7 +297,7 @@ We'll do some input/output examples. Pay attention to what is *given* to each fu
 
     If we run `variable_example = input()`, this tells the computer to 1) ask the user for input, 2) create a variable names `variable_example`, and 3) store what the user typed and the user types `Oprah did 9/11`, then `variable_example` now has a value of `Oprah did 9/11`.
 
-    It's more helpful to think of `=` as a way to *store* something than as an equals sign. "Equals" in math doesn't care which side is which, whereas with the assignment operator, the variable goes on the left, and the thing that gives the info you want storing goes on the right.
+    It's more helpful to think of `=` as a way to *store* something than as an equals sign. "Equals" in math doesn't care which side is which, whereas with the assignment operator, the variable goes on the left, and the thing that gives the info you want storing goes on the right. In python, the way to test if one thing has the same value as another, you use double equals sign (`==`), which is much closer to the mathematical equals sign than the assignment operator `=`.
 
 Other things:
 
@@ -326,7 +327,10 @@ Now, let's put the pieces of what we learned together and try to make a python f
 
 ---
 
-## Data Types
+## Data Types and Basic Ideas
+
+There is a reason people call them "computer languages". This is literally the way we communicate with computers. Just like English, computer languages have the equivalent of conjunctions, verbs, adjectives and just about everything else. However, computer languages almost always intend to get something done with their use, whereas in English, there's lots that is just said to be said.
+
 You can imagine that you have to be really specific with computers. If you're trying to talk about the character "1", that would be different than the number 1. Computers use a few different ways to differentiate data:
 
 - *Strings:* These are what I have been calling "words in quotes". If any characters are between a set of quotes, it is considered words and is stored as words.
@@ -335,3 +339,63 @@ You can imagine that you have to be really specific with computers. If you're tr
 - *Booleans:* These are things that either have the value True or False.
 
 There are others, but these are the basic ones that matter.
+
+Python also includes "key words", which are words that have special meaning when typed in a python file. Here are some examples:
+- `and` and `or`: These are used to join two boolean values into one.
+- `if`, `elif` and `else`: These are explained below, as is `in`.
+
+---
+
+## To Do Before Next Time
+
+> *To Do*: Complete the following project before next meeting and turn it in on Canvas.
+
+### Project: Create a short dialogue program.
+
+Make a program that allows for a short & simple conversation with a user. Here are some things that can help you, with each topic bolded below:
+
+
+**Run a piece of code on a condition.** This is hugely useful as you can imagine.  Simply type `if` followed by something that will be either true or false, then a colon. If you have an alternative case, type `elif`. If you want a catch-all for everything that doesn't fit, type `else`. Anything that is indented below any of these three things will be run only if the condition is true. Here's an example:
+
+```
+1  user_input = input("Type your favorite color between blue and red. ")
+2  if user_input == "blue":
+3       print("Your favorite color is blue.")
+4  elif user_input == "red":
+5  	    print("Your favorite color is red.")
+6  else:
+7  	    print("You're really bad at following instructions.")
+```
+I numbered this chunk of code to point out a few things:
+
+This is called an `if`/`else` block for obvious reasons. In this case, line 2 checks the case that `user_input` is "blue". If this is the case, then line 3 is run, and lines 4 thru 7 are completely skipped since a condition in the block had been fulfilled.
+
+If you were to replace `elif` with `if` on line 4, then in the situation above where `user_input` is indeed "blue", the computer would run line 4 instead of skipping it.
+
+If you wanted, you don't need to have `elif` or `else` involved at all. That would of course depend on your situation.
+
+
+
+**Convert a user input string to all lower-case.** This one is pretty simple. You'll notice that in the above example, if the user types Blue, then the program would not run line 3 since it is a capital B. That's kinda dumb. So instead, you might want to check if the lower-case version of `user_input` is "blue". That would catch the situation where the user types Blue, or even BLue or BLUE. You can do this if you change line 2 from above to read like this:
+
+```
+2  if user_input.lower() == "blue":
+```
+
+**Check to see if a single word is in a string.** I'm guessing you'd want your program to be flexible, within reason. If a user typed My favorite color is red, it would be nice if that still worked. Or maybe a user accidentally types a space at the end of their input, like `blue `. There's a *key word* that can check if a string is inside another: `in`. Using this word will act like a function with two arguments (checking if one is inside another), and will return a boolean value. Here's an example of what it would look like if we just wanted to check if the word "blue" was anywhere inside what your user gave you, again applying it to line 2:
+
+```
+2  if "blue" in user_input:
+```
+
+Combining all the suggestions above, the original program might look like this:
+
+```
+1  user_input = input("Type your favorite color between blue and red. ")
+2  if "blue" in user_input.lower():
+3  	    print("Your favorite color is blue.")
+4  elif "red" in user_input.lower():
+5  	    print("Your favorite color is red.")
+6  else:
+7  	    print("You're really bad at following instructions.")
+```
