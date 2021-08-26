@@ -11,19 +11,22 @@
 ## Short History of Coding
 In the 1600's, the term 'computer' referred to a person who completed calculations. When machines were built to complete basic calculations, they were called computing machines. Of course, eventually we stopped calling them machines, but the basic concept has stayed the same. With the right amount of time and knowledge, a human can do the same thing that a computer could do. In fact, early computers were not much faster than humans. In these days, the only real differences between a human doing work on pen and paper and a computer is *speed* and *accuracy*. In general, it is my opinion that if there is anything that I need to do that makes me role my eyes, a computer could do it faster and I can feel powerful and take responsibility for its achievements.
 
-![Some lady who might be what a computer looked like](imgs/computer.jpg)
+<img src="imgs/computer.jpg" alt="Some lady" width="200"/>
+
 *Some lady who might be what a computer looked like, but she's probably way dead now*
 
 
 Charles Babbage is credited to have designed the first significant computing machine. In 1830s-era war, artillery machines would be so sensitive to slight angles that a fraction of a degree or a mild draft could make you miss a target by a big margin. Huge logs were kept to outline what angle and direction should be used for a given set of conditions, but one small change in the artillery design meant they had to start over from scratch and make a new log, experimentally determining what angle would be best under loads of different conditions. This sucks. Charles Babbage devised a machine that would function for "general purposes", could store a bit of information, and even had a primitive printer. But yeah, that didn't end up going through, and he abandoned the idea for a simpler one. People built it later based off of his plans though, and it totally worked.
 
-![Babbage's machine](imgs/analytical_engine.jpg)
+<img src="imgs/analytical_engine.jpg" alt="Babbage's machine" width="200"/>
+
 *Here's Babbage's machine. Also doubles as an egg slicer.*
 
 
 If Babbage was the world's first computer engineer, Ada Lovelace (a mathematician) was the world's first computer programmer. She devised a set of instructions that could be given to Babbage's machine that could instruct it on computing numbers. This is seriously good stuff, cuz people had been giving instructions ever since growing babies and idiots appeared, but never had there been a bigger idiot in the world than this machine. No amount of saying "do you get it?" helped Lovelace explain her thoughts. She had to explain them with a huge amount of precision. What she did was invent an algorithm. Again, not the first to do that, but the first to do it for a machine computer.
 
-![Ada Lovelace](imgs/ada_lovelace.jpg)
+<img src="imgs/ada_lovelace.jpg" alt="Ada Lovelace" width="200"/>
+
 *Ada Lovelace stored most of her intelligence in her excessively large side-buns*
 
 Early electrical computers were literally hard-wired. Programming a machine that added numbers would literally be something akin to this example (though it may be totally different, I'm BSing things here):
@@ -68,12 +71,14 @@ If you wanted to do a different calculation or algorithm, you'd have to literall
 
 Later, the US census started to be a real pain. The 1880 census took freaking seven years to finish calculating after collecting the data, and that wasn't worth crap by the time it was done. The problem was that so many babies were being made by these horny Americans that calculating by hand was no good. So the US asked Herman Hollerith to figure something out. He introduced a punch-card system that provided a clear way to give a machine information and have it return something as well. These punch cards were used for a hecking long time as a way to communicate with computers (input/output). This cut calculations for the 1890 census down to 2.5 years. And this dude went on to make a "machine tabulating" company, which later became freaking IBM.
 
-![Herman](imgs/herman.jpg)
+<img src="imgs/herman.jpg" alt="Herman" width="200"/>
+
 *Herman boi with his herman toi*
 
 IBM itself a long time later (1944) made a huge room-size computer called the "Harvard Mark I". It included 500 miles of wire. It could only do one division problem every 15 seconds, which is worse in calculation speed than most anti-vaxxers, so it was really bad.
 
-![Harvard Mark I](imgs/harvard.jpg)
+<img src="imgs/harvard.jpg" alt="Harvard Mark I" width="200"/>
+
 *The Harvard Mark I computer*
 
 Obviously, with better hardware things got better, blah blah blah. Now I'm able to do stuff like wirelessly watch & not understand youtube videos of someone explaining the Higgs Boson at 2 in the morning.
