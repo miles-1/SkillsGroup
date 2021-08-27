@@ -93,18 +93,18 @@ If a user types `yes` for the first question and `NO` for the second for the fol
 isTall = input("Are you tall? ")
 hasCovid = input("Do you have the Covid? ")
 if (isTall == "yes") and (hasCovid == "no"):
-	print("Maybe Covid can't fly too high")
+    print("Maybe Covid can't fly too high")
 else:
-	print("Okay.")
+    print("Okay.")
 ```
 
 What happens in this program when `answer` is `"Not good."`?
 ```python
 answer = input("How is your day going? ").lower()
 if "not good" in answer:
-	print("Awww.")
+    print("Awww.")
 if "good" in answer:
-	print("This is really good news to hear. I love it.")
+    print("This is really good news to hear. I love it.")
 ```
 
 What happens in this program? You might be able to tell what the problem is even if you don't know how the program will respond.
@@ -115,7 +115,7 @@ num1 = int(input("What is the first number? "))
 num2 = int(input("What is the second? "))
 
 if num1 == 0 or 1:
-	print("You should know this one. I won't tell you.")
+    print("You should know this one. I won't tell you.")
 
 print("The answer is " + str(num1 * num2))
 ```
@@ -127,12 +127,12 @@ first_name = "James"
 last_name = "KickButt"
 
 if (first_name == "James"):
-	if (last_name == "KickButt"):
-		print("Wow. What a name.")
-	else:
-		print("That is a pretty normal name.")
+    if (last_name == "KickButt"):
+        print("Wow. What a name.")
+    else:
+        print("That is a pretty normal name.")
 else:
-	print("The name is " + first_name + last_name + ".")
+    print("The name is " + first_name + last_name + ".")
 ```
 
 ---
@@ -290,7 +290,7 @@ Ask for a phrase from the user. Then ask the user for a substring to remove from
     1  counter = 0
     2  
     3  while counter < 3:
-    4  	  counter = counter + 1
+    4      counter = counter + 1
     ```
 
     To understand the above code best, I'll try to explain what the computer is thinking in a lot of detail (jk it's not thinking, but you know what I mean): 
@@ -314,7 +314,7 @@ Ask for a phrase from the user. Then ask the user for a substring to remove from
     1  counter = 0
     2  
     3  while counter < -1:
-    4  	  counter = counter + 1
+    4      counter = counter + 1
     ```
 - **A few hints & tips**:
 
