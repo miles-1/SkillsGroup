@@ -278,7 +278,7 @@ Take hope in knowing that integers and floats do not have the same level of comp
 
 ### Project: Create a program that will ask the user for two strings, and then take every occurrence of one out of the other.
 
-Ask for a phrase from the user. Then ask the user for a substring to remove from the phrase. Example: If the phrase is `"Yeah, I'm gonna take my horse to the old town road I'm gonna ride 'til I can't no more"` and the substring is `"I'm gonna"`, then the program will print out `"Yeah, `&nbsp;&nbsp;&nbsp;` take my horse to the old town road `&nbsp;&nbsp;&nbsp;` ride 'til I can't no more"`. Note that there is a double-space remaining where the string was removed in this example, and that is okay. Here are some things that can help you:
+Ask for a phrase from the user. Then ask the user for a substring to remove from the phrase. Example: If the phrase is `"Yeah, I'm gonna take my horse to the old town road I'm gonna ride 'til I can't no more"` and the substring is `"I'm gonna"`, then the program will print out <code>"Yeah, &nbsp; take my horse to the old town road  &nbsp; ride 'til I can't no more"</code>. Note that there is a double-space remaining where the string was removed in this example, and that is okay. Here are some things that can help you:
 
 - **The `len()` function**: This simply takes a string and returns its length (aka its number of characters). For example, `len("hello")` returns `5`.
 
