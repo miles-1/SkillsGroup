@@ -159,7 +159,7 @@ The stuff listed here has some meaning, and it is nice to know what it is instea
 - The `@` points to where that profile is logged into, which is `Mindows`, the name I gave my computer. Yours will look different, and might be random numbers and letters instead. 
 - Next, `MINGW64` is a program required to get git bash to run on Windows (aka Mac users won't see this in their terminal). 
 - Next is `~`, which means "home directory". The home directory is the folder that contains your Desktop folder and Documents folder. In my case, my home directory is at `C:\Users\miles\`. The fact that the `~` is there means that the terminal is currently looking at my home directory, which is the default when you open the terminal.
-- The `$` just shows where you'll be typing commands.
+- The `$` just shows where you'll be typing commands. Mac users will see `%` instead.
 - If you were to hit enter (or type a command and hit enter), this same block of information will reappear, prompting you to enter another command until you close the terminal.
 
 Now let's try to learn a few commands to use. I'll go over a few examples and then type out a more comprehensive list of examples.
@@ -180,9 +180,13 @@ You've seen that you're in your home directory, but it would be pretty lame if t
 > 
 > Return to your home directory by typing `cd ~` and hitting enter.
 > 
-> Now, while in your home directory, type `cd De` and hit tab. Note that it autocompletes to say `cd Desktop`, since `Desktop` is the only folder in your home directory that starts with the letters `De`. This is pretty darn helpful.
+> Now, while in your home directory, type `cd De` and hit tab. Note that it autocompletes to say `cd Desktop`, since `Desktop` is the only folder in your home directory that starts with the letters `De`. This is pretty darn helpful. Hit enter and it will take you to the desktop.
 >
-> Leave your terminal open.
+> We've already said that in the terminal, `~` means the home folder. It is also the case that `.` means "current folder" and `..` means "one folder up". Therefore, `cd .` effectively does nothing and `cd ..` will take you one folder up.
+>
+> Now, check this out: After going to the desktop folder with the instructions of the last paragraph, hit the up arrow. This pulls up the previous command. Hit it again to see the one before that, etc. Play around with that.
+>
+> Finish by returning to the desktop.
 
 You'll notice here that unlike the `pwd` command, the `cd` command takes an *argument* after it. An *argument* is information that a command accepts that helps specify what you want to do. In this case, the argument for `cd` is simply the destination you want to go to.
 
@@ -316,7 +320,7 @@ Now, let's put the pieces of what we learned together and try to make a python f
 > On your desktop (or anywhere you'd like), make an empty folder. Open VSCode and use the tabs at the top to open the empty folder in the program. You'll see that its name now appears on the left-hand side of VSCode. Mouse over the folder and click the button that will create a new file. Name this file `first.py` and open it by double-clicking. It will be empty.
 >
 > In that empty file, type the following:
-> ```
+> ```python
 > name = input("What is your name? ")
 > print("Nice to meet you", name)
 > ```
@@ -357,7 +361,7 @@ Make a program that allows for a short & simple conversation with a user. Here a
 
 **Run a piece of code on a condition.** This is hugely useful as you can imagine.  Simply type `if` followed by something that will be either true or false, then a colon. The code *indented immediately below* will be run only if the condition is met. If you have an alternative case, type `elif`. If you want a catch-all for everything that doesn't fit, type `else`. Anything that is indented below any of these three things will be run only if the condition is true. Here's an example:
 
-```
+```python
 1  user_input = input("Type your favorite color between blue and red. ")
 2  if user_input == "blue":
 3      print("Your favorite color is blue.")
@@ -378,19 +382,19 @@ If you wanted, you don't need to have `elif` or `else` involved at all. That wou
 
 **Convert a user input string to all lower-case.** This one is pretty simple. You'll notice that in the above example, if the user types Blue, then the program would not run line 3 since it is a capital B. That's kinda dumb. So instead, you might want to check if the lower-case version of `user_input` is "blue". That would catch the situation where the user types Blue, or even BLue or BLUE. You can do this if you change line 2 from above to read like this:
 
-```
+```python
 2  if user_input.lower() == "blue":
 ```
 
 **Check to see if a single word is in a string.** I'm guessing you'd want your program to be flexible, within reason. If a user typed My favorite color is red, it would be nice if that still worked. Or maybe a user accidentally types a space at the end of their input, like `blue `. There's a *key word* that can check if a string is inside another: `in`. Using this word will act like a function with two arguments (checking if one is inside another), and will return a boolean value. Here's an example of what it would look like if we just wanted to check if the word "blue" was anywhere inside what your user gave you, again applying it to line 2:
 
-```
+```python
 2  if "blue" in user_input:
 ```
 
 Combining all the suggestions above, the original program might look like this:
 
-```
+```python
 1  user_input = input("Type your favorite color between blue and red. ")
 2  if "blue" in user_input.lower():
 3      print("Your favorite color is blue.")
