@@ -393,9 +393,9 @@ Combining all the suggestions above, the original program might look like this:
 ```
 1  user_input = input("Type your favorite color between blue and red. ")
 2  if "blue" in user_input.lower():
-3  	    print("Your favorite color is blue.")
+3      print("Your favorite color is blue.")
 4  elif "red" in user_input.lower():
-5  	    print("Your favorite color is red.")
+5      print("Your favorite color is red.")
 6  else:
-7  	    print("You're really bad at following instructions.")
+7      print("You're really bad at following instructions.")
 ```
