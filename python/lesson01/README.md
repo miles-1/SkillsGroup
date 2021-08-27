@@ -186,7 +186,7 @@ These errors cause bad program performance, and are definitely a problem. Separa
 
 > *To Do:* use the REPL
 >
-> Go into the terminal and type `python` (or `python3` for Mac users) and hit enter. We did this last week as well. You have entered the **Read-Eval-Print Loop** (REPL, pronounced "repple"). It's called that because it reads the single line of code you've typed, evaluated it, and it prints the data involved. 
+> Go into the terminal and type `python` (or `python3` for Mac users) and hit enter. We did this last week as well. You have entered the **Read-Eval-Print Loop** (REPL, pronounced "repple"). It's called that because it reads the single line of code you've typed, evaluated it, and it prints the data involved. Try out the following examples where appropriate, and get familiar with how to navigate the repl.
 
 In the REPL, you can test all sorts of code and see if it works, instead of needing to save the code and run it each time. Below is a line-by-line example. Note that I pressed enter after each line starting with `>>>` and that python printed the rest of the lines in response to what I've typed. Also, notice that if I store data in a variable, it is not printed, but can be printed afterwards by just typing in the variable name and hitting enter.
 
