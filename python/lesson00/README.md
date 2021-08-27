@@ -360,11 +360,11 @@ Make a program that allows for a short & simple conversation with a user. Here a
 ```
 1  user_input = input("Type your favorite color between blue and red. ")
 2  if user_input == "blue":
-3       print("Your favorite color is blue.")
+3      print("Your favorite color is blue.")
 4  elif user_input == "red":
-5  	    print("Your favorite color is red.")
+5      print("Your favorite color is red.")
 6  else:
-7  	    print("You're really bad at following instructions.")
+7      print("You're really bad at following instructions.")
 ```
 I numbered this chunk of code to point out a few things:
 
