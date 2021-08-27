@@ -355,7 +355,7 @@ Python also includes "key words", which are words that have special meaning when
 Make a program that allows for a short & simple conversation with a user. Here are some things that can help you, with each topic bolded below:
 
 
-**Run a piece of code on a condition.** This is hugely useful as you can imagine.  Simply type `if` followed by something that will be either true or false, then a colon. If you have an alternative case, type `elif`. If you want a catch-all for everything that doesn't fit, type `else`. Anything that is indented below any of these three things will be run only if the condition is true. Here's an example:
+**Run a piece of code on a condition.** This is hugely useful as you can imagine.  Simply type `if` followed by something that will be either true or false, then a colon. The code *indented immediately below* will be run only if the condition is met. If you have an alternative case, type `elif`. If you want a catch-all for everything that doesn't fit, type `else`. Anything that is indented below any of these three things will be run only if the condition is true. Here's an example:
 
 ```
 1  user_input = input("Type your favorite color between blue and red. ")
