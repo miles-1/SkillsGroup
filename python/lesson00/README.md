@@ -281,7 +281,7 @@ To learn python basics, we're going to use a fast, interactive version of python
 >
 > Read on and use this terminal window to play around with the following examples. See what you can gather is occurring with each example, and try to focus on demystifying your confusions with experimentation. When you're done, type `quit()` and hit enter to return to the normal terminal, or hit x to close the terminal entirely.
 >
->> *Windows users:* If it doesn't work when you type `python` in the terminal (aka it just stays there and does nothing), copy and paste the following code into git bash, hit enter, close git bash, and it should >work the next time you open it.
+>> *Windows users:* If it doesn't work when you type `python` in the terminal (aka it just stays there and does nothing), copy and paste the following code into git bash, hit enter, close git bash, and it should work the next time you open it.
 >>
 >> ```
 >> echo "alias python='winpty python.exe'" >> ~/.bashrc
