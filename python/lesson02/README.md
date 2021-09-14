@@ -2,7 +2,8 @@
 # Lesson 00
 
 ## Contents
-- []()
+- [Review](#review)
+- [Python Docs](#python-documentation)
 - [To do before next time](#to-do-before-next-time)
 
 ---
