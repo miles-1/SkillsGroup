@@ -187,6 +187,8 @@ You've seen that you're in your home directory, but it would be pretty lame if t
 > Now, check this out: After going to the desktop folder with the instructions of the last paragraph, hit the up arrow. This pulls up the previous command. Hit it again to see the one before that, etc. Play around with that.
 >
 > Finish by returning to the desktop.
+>
+>> *Windows users:* It may be the case that your Desktop folder is located at `~/OneDrive/Desktop` or something similar if you've ever backed up your desktop to OneDrive. No worries, just adjust accordingly for this excercise.
 
 You'll notice here that unlike the `pwd` command, the `cd` command takes an *argument* after it. An *argument* is information that a command accepts that helps specify what you want to do. In this case, the argument for `cd` is simply the destination you want to go to.
 
@@ -277,7 +279,15 @@ To learn python basics, we're going to use a fast, interactive version of python
 >
 > Go to your terminal and type `python` (or `python3` for Mac users) and hit enter. You'll see the terminal looks a little different, and now has >>> instead of the computer information.
 >
-> Read on and use this terminal window to play around with the following examples. See what you can gather is occurring with each example, and try to focus on demystifying your confusions with experimentation. When you're done, type `quit()` and hit enter to return to the normal terminal, or hit x to close the 
+> Read on and use this terminal window to play around with the following examples. See what you can gather is occurring with each example, and try to focus on demystifying your confusions with experimentation. When you're done, type `quit()` and hit enter to return to the normal terminal, or hit x to close the terminal entirely.
+>
+>> *Windows users:* If it doesn't work when you type `python` in the terminal (aka it just stays there and does nothing), copy and paste the following code into git bash, hit enter, close git bash, and it should work the next time you open it.
+>>
+>> ```
+>> echo "alias python='winpty python.exe'" >> ~/.bashrc
+>> ```
+>>
+>> For some reason, git bash doesn't understand when you type `python` initially and requires you to tell you what you mean when you say `python`. Happy to explain more if you're interested.
 
 We'll do some input/output examples. Pay attention to what is *given* to each function and what each *returns*.
 
