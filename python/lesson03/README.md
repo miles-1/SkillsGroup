@@ -348,7 +348,8 @@ Ask the user to pick from three colors. Then, ask them to pick between two pictu
     color = "" # no color has been chosen yet
 
     while not valid_answer:  # aka while there is no valid answer from the user yet
-        choice1 = input("Pick one of the following colors by entering its associated numbers:\n1)red\n2)blue\n3)green\nType your answer here: ") 
+        choice1 = input("Pick one of the following colors by entering its associated numbers:" + \
+        "\n1)red\n2)blue\n3)green\nType your answer here: ") 
 
         if choice1 == "1":
             color = "red"
@@ -363,3 +364,5 @@ Ask the user to pick from three colors. Then, ask them to pick between two pictu
             print("Your input was invalid. Try again.")
     ```
 In the code above, you could then use the variable color to fill the shape wherever you need it. However, picking between the two shapes will require an `if` and `elif` that contain the whole instructions to draw the picture.
+
+*Quick note:* notice that I "broke up" the string into two lines for the `input` function. This is for better readability. Note that to tell python that I wasn't going to give the second fragment until a new line, I typed `/`, which in this case means "continue to the next line", and is *not* used as the escape character like it would be in a string.
