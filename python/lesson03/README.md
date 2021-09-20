@@ -266,20 +266,15 @@ turtle.done()
 
 That left eye isn't doing so hot. Why is that? Well, the turtle was pointing west when it started drawing the circle. It always draws circles to its left. If that's the case, I can just flip the turtle to face east at the same point by adding `turtle.right(180)` just before the `turtle.pendown()` command.
 
-<div style="text-align:center">
-  <div style="display:inline-block; padding: 15px">
-    <figure>
-    <img src="imgs/5.png" alt="circle1">
-    <figcaption>before hiding turtle</figcaption>
-    </figure>
-  </div>
-  <div style="display:inline-block; 15px">
-    <figure>
-    <img src="imgs/6.png" alt="circle1">
-    <figcaption>wow the turtle is no here</figcaption>
-    </figure>
-  </div>
-</div>
+<figure style="text-align:center">
+<img src="imgs/5.png" alt="circle1">
+<figcaption>before hiding turtle</figcaption>
+</figure>
+
+<figure  style="text-align:center">
+<img src="imgs/6.png" alt="circle1">
+<figcaption>wow the turtle is no here</figcaption>
+</figure>
 
 Anyways. We could keep going with this, but I'm going to add a few things, and leave comments so you can follow along. If you use a number multiple times, it would be good to just throw it into a variable so you can adjust it later. Check out `eye_dist` and `head_radius` for examples of this.
 
