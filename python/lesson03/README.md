@@ -269,13 +269,13 @@ That left eye isn't doing so hot. Why is that? Well, the turtle was pointing wes
 <div style="text-align:center">
   <div style="display:inline-block; padding: 15px">
     <figure>
-    <img src="imgs/5.png" alt="circle1" style="width:100%">
+    <img src="imgs/5.png" alt="circle1">
     <figcaption>before hiding turtle</figcaption>
     </figure>
   </div>
   <div style="display:inline-block; 15px">
     <figure>
-    <img src="imgs/6.png" alt="circle1" style="width:100%">
+    <img src="imgs/6.png" alt="circle1">
     <figcaption>wow the turtle is no here</figcaption>
     </figure>
   </div>
