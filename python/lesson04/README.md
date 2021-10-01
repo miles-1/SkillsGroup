@@ -68,6 +68,6 @@ encode = "qazxswedcvfrtgbnhyujmkiolp"
 
 ## To Do Before Next Time
 
-> *To Do*: Complete the following project before next meeting and turn it in on Canvas.
+> *To Do*: Complete the following project before next meeting. No submission necessary.
 
-### Project: 
+### Project: Try out the rest of the exercises above on your own. No need to submit, just let me know if you run into any bumps.
