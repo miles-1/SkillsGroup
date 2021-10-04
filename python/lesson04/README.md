@@ -64,8 +64,6 @@ normal = "abcdefghijklmnopqrstuvwxyz"
 encode = "qazxswedcvfrtgbnhyujmkiolp"
 ```
 
-6. You have two files. One is a dictionary, basically, and another is a paper you wrote late at night while you were dozing off. How can you make a program that will check which words in your paper are in the dictionary and which ones aren't? Here's the [dictionary](text_files/dictionary.txt) and your [late-night paper](text_files/ex4.txt).
-
 ## To Do Before Next Time
 
 > *To Do*: Complete the following project before next meeting. No submission necessary.

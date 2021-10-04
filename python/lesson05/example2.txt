@@ -1,0 +1,16 @@
+This
+file
+has
+16
+lines,
+but
+using
+the
+for
+loop
+gets
+rid
+of
+the
+new
+lines.
