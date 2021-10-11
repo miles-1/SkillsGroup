@@ -5,6 +5,7 @@
 - [Review](#review)
 - [More on Immutability](#more-on-immutability)
 - [Lists](#lists)
+- [Sorting](#sorting)
 - [To do before next time](#to-do-before-next-time)
 
 ---
@@ -195,9 +196,111 @@ print(guestList1)
 print(guestList2)
 ```
 You can see here that any change you make to `guestList2` will also occur in `guestList1`, and this is due to the fact that you're not making a *copy* of the list in line 2, you're actually just straight up telling both variables to point to the same thing. To fix this, use the `.copy()` method in line 2 instead, which will make a new spot in memory for a copied list:
+
 ```python
 guestList2 = guestList1.copy()
 ```
+
+One last tidbit, if you want to swap the position of two elements in a list in python, you can do one of the following:
+
+```python
+lst = [1, 2, 3]
+# GOAL: switch the 1 and the 2 in lst
+
+# BAD method. Think: why would this NOT work?
+lst[1] = lst[0]
+lst[0] = lst[1]
+
+# Good Method 1: use temp variable.
+temp = lst[1]
+lst[1] = lst[0]
+lst[0] = temp
+
+# Good Method 2: simultaneous assignment.
+lst[0], lst[1] = lst[1], lst[0]
+
+# The last thing is just a fancy python work-around. It can be used in other places too, just throwing this out there.
+
+# ALSO, note that if lst[0] or lst[1] is on the left of the assignment operator (aka =), then it is treated like a variable holding a spot in the list. If it is on the right, it is simply returning what is stored in that position. Not really all that different from regular variables, but important to note when you're thinking of mutability.
+
+```
+
+## Sorting
+
+If you talk to a real-life computer scientist, they are likely interested in the subfield of sorting. That sounds like the dumbest thing ever, but it's legit! Think about this list of numbers (not written in python, going for ideas here):
+
+```
+1, 5, 6, 2, 3, 1, 4
+```
+Now, and I'm not kidding when I ask this, how the heck do you sort this from low to high? In other words, what would you do step-by-step for the list above to get it in order? Turns out this **is** and interesting question lol.
+
+> *To Do*: Try to devise a set of instructions (using English, not code) that would successfully 
+
+Turns out there are literally hundreds of approaches, each with varying levels of effectiveness under case-specific contexts. It's good practice to see this code in practice even though you'll likely not get into this topic.
+
+Additionally, this gets us an introduction to the idea of "algorithms", which blur the lines between computer science and mathematics in a really cool way. Don't worry, this math is approachable and puzzle-like instead of calculus math, which you may not be fond of.
+
+### Bogo Sort
+
+There does not exists a worse approach to sorting than [bogo sort](https://en.wikipedia.org/wiki/Bogosort). Imagine having 10 playing cards in your hand and shuffling them over and over again until it happens to be in the right order. And yes, that means that if you shuffle it and it's only one card off, you're not allowed to make the one fix, you have to reshuffle it and hope for the best next time.
+
+Notice that this gives no guarantee for successful sorting in a reasonable amount of time, and the bigger the list gets the less effective this algorithm becomes. If the list has $n$ objects, then on average it takes $n!$ (aka $n$-factorial) tries to get it right. So that means a list of size 5 would on average take 120 tries to get sorted, which isn't too bad, but if you have 100 objects in the list, it is no exaggeration to say that humanity and the universe itself will no longer exist by the time this algorithm could sort that list at any currently feasible speeds.
+
+This sorting algorithm was introduced as a joke. Noice.
+
+### Bubble Sort
+
+[Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort) is a nice, approachable idea to sorting. It might even be similar to the one you thought of when you were thinking about this.
+
+Small detail: this is reffered to as an in-place sorting algorithm, meaning that this algorithm changes the order of the numbers in the list instead of producing a new, sorted version of the original list.
+
+**Pass 1:**
+
+1. Start by looking at the first two numbers in the list (aka the numbers at index `0` and `1`). Which is bigger? If the left number is bigger than the right, switch their positions. Otherwise, leave them alone.
+2. Now, look at whatever is at indices `1` and `2`. Which is bigger? Do the same as before.
+
+    etc... etc...
+
+At the end of Pass 1, nothing is guaranteed except one thing: the *biggest* number in the list will have "bubbled up" to the last position of the list. We don't know much, but by golly we know that the last number in the list is right where it is supposed to be.
+
+Now what? Well, besides the last number, we're clueless about where the other numbers are supposed to go. Sounds like we're in the same situation we were before, if we ignore the last number. (I'm going to cringily fake realization here, forgive me) WAIT A MINUTE, what if we just repeated this "pass 1" process over and over, every time putting the next-highest number in its place until we're all in order? That'll work.
+
+Note that once numbers are where they are supposed to be, we don't mess with them anymore and effectively ignore them for the rest of the algorithm.
+
+This method, *unlike* Bogo sort and *like* most other sorts, guarantees that it will get sorted by a certain time. And that's nice. Anyway, I could get hecka complicated with this but I'm leaving it here, besides to show an example of bubble sort written in python:
+
+```python
+lst = [1, 5, 6, 2, 3, 1, 4]
+
+for end_index in range(len(lst)-1, 1, -1):
+    # This "end_index" is to help ignore the parts
+    # that are already sorted as we progress.
+    for i in range(end_index):
+        if lst[i] > lst[i+1]:
+            lst[i], lst[i+1] = lst[i+1], lst[i]
+        # Only switches if the two are out of order.
+        # Nothing happens otherwise.
+
+print(lst)        
+```
+
+Also, python just packages sorting for us in a couple of functions, which is usually what you ought to do:
+
+```python
+lst = [1, 5, 6, 2, 3, 1, 4]
+lst.sort() # in-place sorting: it will modify the list
+sorted(lst) # out-of-place sorting: returns new, sorted list (no modification to original)
+```
+
+### Other sorts worth looking at
+
+Like these are pretty funny (or at least interesting) videos to watch so maybe watch them for fun.
+
+- [Insertion sort dance](https://www.youtube.com/watch?v=ROalU379l3U)
+- [Quick sort dance](https://www.youtube.com/watch?v=ywWBy6J5gz8) (this is generally the preferred method of sorting, and it was kinda a breakthrough for computer scientists in reducing sorting speeds)
+- [Selection sort animation](https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif)
+- [A video](https://www.youtube.com/watch?v=kPRA0W1kECg) showing several different sorting algorithms (look at top left for name of sorting)
+
 ## To Do Before Next Time
 
 > *To Do*: Complete the following project before next meeting.
