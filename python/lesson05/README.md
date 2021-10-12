@@ -244,7 +244,7 @@ Additionally, this gets us an introduction to the idea of "algorithms", which bl
 
 There does not exists a worse approach to sorting than [bogo sort](https://en.wikipedia.org/wiki/Bogosort). Imagine having 10 playing cards in your hand and shuffling them over and over again until it happens to be in the right order. And yes, that means that if you shuffle it and it's only one card off, you're not allowed to make the one fix, you have to reshuffle it and hope for the best next time.
 
-Notice that this gives no guarantee for successful sorting in a reasonable amount of time, and the bigger the list gets the less effective this algorithm becomes. If the list has $n$ objects, then on average it takes $n!$ (aka $n$-factorial) tries to get it right. So that means a list of size 5 would on average take 120 tries to get sorted, which isn't too bad, but if you have 100 objects in the list, it is no exaggeration to say that humanity and the universe itself will no longer exist by the time this algorithm could sort that list at any currently feasible speeds.
+Notice that this gives no guarantee for successful sorting in a reasonable amount of time, and the bigger the list gets the less effective this algorithm becomes. If the list has *n* objects, then on average it takes *n!* (aka *n*-factorial) tries to get it right. So that means a list of size 5 would on average take 120 tries to get sorted, which isn't too bad, but if you have 100 objects in the list, it is no exaggeration to say that humanity and the universe itself will no longer exist by the time this algorithm could sort that list at any currently feasible speeds.
 
 This sorting algorithm was introduced as a joke. Noice.
 
