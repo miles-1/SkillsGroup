@@ -2,7 +2,10 @@
 # Lesson 06
 
 ## Contents
+- [Review](#review)
 - [Defining Functions](#defining-functions)
+    - [Abstraction and Encapsulation](#abstraction-and-encapsulation) 
+    - [Scope](#scope)
 - [To do before next time](#to-do-before-next-time)
 
 ---
@@ -69,7 +72,7 @@ So here, instead of writing the code over and over, we've "wrapped up" the avera
 print(avg)
 ```
 
-### Abstraction & Encapsulation
+### Abstraction and Encapsulation
 
 Before I explain what's going on up in the example, I want to talk about the motivation of defining a function. What we've done here is an important step in the logic of coding: **abstraction** and **encapsulation**. There is a lot of coding that is just plain old bookkeeping. It is uninteresting, hard to follow and semantical. It does the job, but it's not easy to read. Obviously, computing an average is not *that* hard, but let's pretend it is really complicated for a second. If so, it is nice for people reading your code to have the average computation *abstracted*/*encapsulated* to a function call `avg`. 
 
