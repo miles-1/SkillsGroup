@@ -50,6 +50,7 @@ function [T,D] = getPositions(vecs, cons)
     init = [x_init' dx_init' y_init' dy_init'];
     
     F = odeFunction(eqns,vars);
+    disp(F)
     [T, D] = ode45(F,[0 tlength],init);
 end
 
@@ -74,6 +75,8 @@ function eqns = getFormulas(vecs, mass, funcs)
     eqn1 = -G*mw^3/norm(fromz)^3*fromz(1);
     eqn2 = -G*mw^3/norm(fromz)^3*fromz(2);
     eqns = formula([funcs(3:4) eqn1 eqn2]);
+    disp(size(eqns))
+    disp(eqns)
 end
 
 function plotPlanets(vecs, cons, scale, speed)
